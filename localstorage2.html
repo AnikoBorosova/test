@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script>	
+		function doFirst() {
+			var button = document.getElementById('button');
+			button.addEventListener('click', save, false);
+			//display();
+		}
+
+		function save() {
+			var key = document.getElementById('key').value;
+			var value = document.getElementById('value').value;
+			localStorage.setItem(key,value);
+			//display();
+			//key.value="";
+			//value.value="";
+			
+		}
+		/*
+		function display() {
+			var display-data = document.getElementById('display-data');
+			display-data.innerHTML = "";
+			for(var i = 0; i < sessionStorage.length;i++) {
+				var a = sessionStorage.key(i);
+				var b = sessionStorage.getItem(a);
+				display-data.innerHTML+= a + '' + b;
+			}
+		}  */
+
+		window.addEventListener('load',doFirst, false);
+	</script>
+</head>
+<body>
+
+	<!-- Chrome Dev Tools - Application - Storage - LocalStorage -->
+	<section id="box">
+		<form>
+			<p>Key:<br><input type="text" id="key"></p>
+			<p>Value:<br><input type="text" id="value"></p>
+			<p><input type="submit" value="Submit" id="button"></p>
+		</form>
+	</section>
+
+</body>
+</html>

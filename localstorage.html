@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<!-- Chrome Dev Tools - Application - Storage - LocalStorage -->
+
+	<input type="text" id="textfield">
+	<input type="button" value="save" onclick="save()">
+
+	<script>	
+	    function save() {
+	    	var fieldValue = document.getElementById('textfield').value;
+	    	localStorage.setItem('text', fieldValue);
+	    }
+	</script>
+</body>
+</html>
