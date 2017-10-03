@@ -1,0 +1,13 @@
+$(function() {
+
+	var edit = document.getElementById('edit'); //ul
+
+	$(edit).blur(function() {
+		localStorage.setItem('toDodata', this.innerHTML);
+	});
+
+	//when the page loads
+	if (localStorage.getItem('toDoData')) {
+		edit.innerHTML = localStorage.getItem('toDoData');
+	}
+});
