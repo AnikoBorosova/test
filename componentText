@@ -1,0 +1,24 @@
+/*
+
+enableBox: true, disableBox: false, hideBox: hideBox(), showBox: showBox()
+
+params="enableBox: true, disableBox: false, hideBox: hideBox, showBox: showBox"
+
+ko.components.register('help-box', {
+    viewModel: { require: 'help-box/componentViewModel.js' },
+    template: { require: 'text!help-box/componentTemplate.html' }
+});
+
+
+
+<template id='my-component-template'>
+    <h1 data-bind='text: title'></h1>
+    <button data-bind='click: doSomething'>Click me right now</button>
+</template>
+… can be used as the template for a component by specifying its ID:
+
+ko.components.register('my-component', {
+    template: { element: 'my-component-template' },
+    viewModel: ...
+});
+*/
